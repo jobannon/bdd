@@ -21,6 +21,7 @@ blocks:
             - cache restore
             - bundle install --deployment --path vendor/bundle
             - cache store
-            - 'bundle exec rake db:setup'
-            - 'bundle exec rake db:test:prepare'
+            - bundle exec rake db:setup
+            - bundle exec rake db:test:prepare
             - bundle exec rspec
+            - bundle exec cucumber
